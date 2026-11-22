@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", Menlo, Consolas, monospace;
+
+  --color-cream-50: #FFFCF7;
+  --color-cream-100: #FBF2E3;
+  --color-cream-200: #F6E6C9;
+
+  --color-amber-100: #F7E2AE;
+  --color-amber-200: #F0CE82;
+  --color-amber-300: #E7B75B;
+  --color-amber-400: #D8A03F;
+  --color-amber-500: #B98232;
+
+  --color-coral-100: #F6DCD5;
+  --color-coral-200: #EEBCB0;
+  --color-coral-300: #E39C8C;
+  --color-coral-400: #CD7C6C;
+  --color-coral-500: #AE5F51;
+  --color-coral-600: #95493D;
+
+  --color-ink: #4A3B32;
+  --color-ink-700: #3A2E27;
+  --color-ink-900: #2A211C;
+
+  --color-nightbg: #241B17;
+  --color-nightbg-50: #2E2320;
+  --color-nightbg-100: #382B26;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(180, 130, 90, 0.32);
+    border-radius: 8px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(230, 190, 140, 0.22);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.chord-line,
+.lyric-line {
+  white-space: pre;
+  font-family: var(--font-mono);
+  line-height: 1.65;
+}
+
+.chord-token {
+  display: inline;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  line-height: inherit;
+  color: #AE5F51;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 2px;
+  transition: background-color 0.14s ease, color 0.14s ease;
+}
+
+.chord-token:hover,
+.chord-token:focus-visible {
+  background: rgba(174, 95, 81, 0.16);
+  text-decoration: underline;
+  outline: none;
+}
+
+.dark .chord-token {
+  color: #E7B489;
+}
+
+.dark .chord-token:hover,
+.dark .chord-token:focus-visible {
+  background: rgba(231, 180, 137, 0.18);
+}
+
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: #E7B75B;
+}
+
+.dark input[type="range"].slider {
+  background: #6B5642;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #AE5F51;
+  cursor: pointer;
+}
+
+.dark input[type="range"].slider::-webkit-slider-thumb {
+  background: #E7B489;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

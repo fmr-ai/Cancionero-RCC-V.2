@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Cancionero RCC Arica",
+  "description": "Cancionero litúrgico interactivo con categorías y subcategorías desplegables, transporte de tonos, cejillo, diagramas de guitarra y teclado, modo escenario, repertorios, impresión y sincronización en vivo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

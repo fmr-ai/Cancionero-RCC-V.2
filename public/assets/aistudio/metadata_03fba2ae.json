@@ -1,0 +1,6 @@
+{
+  "name": "Cancionero RCC Arica",
+  "description": "Cancionero litúrgico interactivo con categorías y subcategorías desplegables, transporte de tonos, diagramas de guitarra, repertorios, impresión y sincronización en vivo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
